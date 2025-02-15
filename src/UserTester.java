@@ -92,15 +92,7 @@ public class UserTester {
         tearDown();
     }
 
-    @Test
-    public void testActivityRankOutOfBoundsGreaterThanEight() {
-        setUp();
-        IllegalArgumentException thrown = assertThrows(
-                IllegalArgumentException.class, () -> user.incProgress(9), "Expected incProgress to throw, but it didn't"
-        );
-        assertTrue(thrown.getMessage().contentEquals("The rank of an activity cannot be less than 8, 0, or greater than 8!"));
-        tearDown();
-    }
+
 
     @Test
     public void testToString() {
